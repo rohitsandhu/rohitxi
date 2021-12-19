@@ -11,16 +11,34 @@
             .main-div{
                 display: flex;
                 justify-content: center;
-                height: 80vh;
+                height: 100vh;
                 align-items: center;
+                background-color: black;
+                color: white;
+            }
+            body{
+                margin: 0;   
             }
         </style>
     </head>
     <body>
         
-        <div class="main-div">
+        <div id="main-div" class="main-div">
             Rohit
         </div>
 
+        <script>
+
+            var intervalId = window.setInterval(function(){
+                console.log("second: "+intervalId++)
+                changeColor();
+            }, 1000);
+
+            function changeColor(main_div) {
+                var randomColor = Math.floor(Math.random()*16777215).toString(16);
+                document.getElementById("main-div").style.color = "#"+ randomColor;
+            }
+
+        </script>
     </body>
 </html>
