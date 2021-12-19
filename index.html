@@ -30,9 +30,9 @@
         <script>
 
             var intervalId = window.setInterval(function(){
-                console.log("second: "+intervalId++)
+                console.log(" 1/2 of second: "+intervalId++)
                 changeColor();
-            }, 1000);
+            }, 500);
 
             function changeColor(main_div) {
                 var randomColor = Math.floor(Math.random()*16777215).toString(16);
